@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Letterboxd for Google",
-  "short_name": "Letterboxd",
+  "name": "gBoxd — Letterboxd for Google Search",
+  "short_name": "gBoxd",
   "version": "1.0.0",
   "description": "Adds a Letterboxd button to Google's movie knowledge panel so you can jump straight to any film's page.",
   "homepage_url": "https://github.com/0snug0/letterboxd-google",

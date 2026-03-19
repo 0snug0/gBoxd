@@ -1,8 +1,8 @@
-# Letterboxd for Google
+# gBoxd — Letterboxd for Google Search
 
 A minimal Chrome extension that adds a **Letterboxd** button to Google's movie knowledge panel — so you can jump straight to any film's page without leaving Google Search.
 
-![screenshot](screenshot.png)
+![screenshot](img/screenshot.png)
 
 ## Features
 

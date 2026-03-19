@@ -31,7 +31,7 @@ jobs:
       - name: Package extension
         run: |
           VERSION=${{ steps.version.outputs.VERSION }}
-          zip -r "letterboxd-google-v${VERSION}.zip" \
+          zip -r "gboxd-v${VERSION}.zip" \
             manifest.json \
             content.js \
             styles.css \
@@ -49,8 +49,8 @@ jobs:
             <!-- Fill this in or use a CHANGELOG.md -->
 
             ## Chrome Web Store
-            Upload `letterboxd-google-v${{ steps.version.outputs.VERSION }}.zip` at:
+            Upload `gboxd-v${{ steps.version.outputs.VERSION }}.zip` at:
             https://chrome.google.com/webstore/devconsole
-          files: "letterboxd-google-v${{ steps.version.outputs.VERSION }}.zip"
+          files: "gboxd-v${{ steps.version.outputs.VERSION }}.zip"
           draft: false
           prerelease: false

@@ -29,8 +29,8 @@ Clicking the Letterboxd button will take you to [letterboxd.com](https://letterb
 
 ## Changes
 
-If this policy changes, the updated version will be committed to the public repository at [github.com/0snug0/letterboxd-google](https://github.com/0snug0/letterboxd-google).
+If this policy changes, the updated version will be committed to the public repository at [github.com/0snug0/gBoxd](https://github.com/0snug0/gBoxd).
 
 ## Contact
 
-Open an issue at [github.com/0snug0/letterboxd-google/issues](https://github.com/0snug0/letterboxd-google/issues).
+Open an issue at [github.com/0snug0/gBoxd/issues](https://github.com/0snug0/gBoxd/issues).

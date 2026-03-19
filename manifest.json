@@ -4,7 +4,7 @@
   "short_name": "gBoxd",
   "version": "1.0.0",
   "description": "Adds a Letterboxd button to Google's movie knowledge panel so you can jump straight to any film's page.",
-  "homepage_url": "https://github.com/0snug0/letterboxd-google",
+  "homepage_url": "https://github.com/0snug0/gBoxd",
   "permissions": [],
   "content_scripts": [
     {

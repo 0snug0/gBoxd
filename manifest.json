@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Letterboxd for Google",
+  "short_name": "Letterboxd",
+  "version": "1.0.0",
+  "description": "Adds a Letterboxd button to Google's movie knowledge panel so you can jump straight to any film's page.",
+  "homepage_url": "https://github.com/0snug0/letterboxd-google",
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

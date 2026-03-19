@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+
+      - name: Sync manifest version with tag
+        run: |
+          VERSION=${{ steps.version.outputs.VERSION }}
+          jq --arg v "$VERSION" '.version = $v' manifest.json > manifest.tmp.json
+          mv manifest.tmp.json manifest.json
+
+      - name: Package extension
+        run: |
+          VERSION=${{ steps.version.outputs.VERSION }}
+          zip -r "letterboxd-google-v${VERSION}.zip" \
+            manifest.json \
+            content.js \
+            styles.css \
+            icons/ \
+            PRIVACY_POLICY.md \
+            LICENSE \
+            README.md
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "v${{ steps.version.outputs.VERSION }}"
+          body: |
+            ## What's changed
+            <!-- Fill this in or use a CHANGELOG.md -->
+
+            ## Chrome Web Store
+            Upload `letterboxd-google-v${{ steps.version.outputs.VERSION }}.zip` at:
+            https://chrome.google.com/webstore/devconsole
+          files: "letterboxd-google-v${{ steps.version.outputs.VERSION }}.zip"
+          draft: false
+          prerelease: false

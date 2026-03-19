@@ -1,0 +1,59 @@
+.lbxd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  vertical-align: middle;
+  gap: 6px;
+  box-sizing: border-box;
+
+  height: 40px;
+  padding: 12px 20px;
+  margin: 14px 0 0 8px;
+
+  border-radius: 100px;
+  border: 1.5px solid transparent;
+
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-decoration: none !important;
+
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.18s ease, border-color 0.18s ease,
+    color 0.18s ease, box-shadow 0.18s ease;
+  outline: none;
+}
+
+.lbxd-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.lbxd-btn--open {
+  background: transparent;
+  color: #00E054 !important;
+  border-color: #00E054;
+}
+
+.lbxd-btn--open:hover {
+  background: rgba(0, 224, 84, 0.1);
+  border-color: #00E054;
+  color: #00E054 !important;
+}
+
+.lbxd-btn--open:active {
+  background: rgba(0, 224, 84, 0.18);
+  transform: scale(0.97);
+}
+
+.lbxd-btn--open:focus-visible {
+  outline: 2px solid #00E054;
+  outline-offset: 3px;
+}
